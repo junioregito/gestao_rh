@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block main %}
-<h2>Removendo Departamento </h2>
+<h2>Removendo Registro de Hora Extra </h2>
 <form method="post">
     {% csrf_token %}
-    <h1>Confirma Deletar o departamento {{ object }} </h1>
+    <h1>Confirma Deletar {{ object }} </h1>
     {{ form }}
     <button type="submit" class="btn btn-danger">Confirmar</button>
 </form>
