@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block main %}
+{{ form.erros }}
+
+<!--
+Quando o meu form está encarregado de mandar um arquivo tem que definir esse enctype (vai fazer o
+upload do arquivo)
+-->
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form|bootstrap }}
+    <button type="submit">Adicionar</button>
+</form>
+{% endblock %}
